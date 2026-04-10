@@ -1,0 +1,181 @@
+/* ================= MAIN HEADER ================= */
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* ================= CONTAINER ================= */
+.header-container {
+  width: 100%;
+  padding: 12px 40px; /* 🔥 gives spacing instead of margin auto */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= LOGO ================= */
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box img {
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ================= CONTACT WRAPPER ================= */
+.contact-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+/* ================= CONTACT CARD ================= */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: #f5f8ff;
+}
+
+/* ================= NAME ================= */
+.owner-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 13px;
+  color: #444;
+}
+
+/* ================= PHONE ================= */
+.contact-card a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e5eff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: #000;
+}
+
+/* ================= ICONS ================= */
+.contact-card img {
+  width: 14px;
+  height: 14px;
+}
+
+/* ================= ALERT BAR ================= */
+.alert-bar {
+  background: linear-gradient(90deg, #1e5eff, #00aaff);
+  color: #fff;
+
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 12px 20px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .logo-box img {
+    height: 42px;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .contact-card {
+    flex: 1;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .owner-name {
+    font-size: 12px;
+  }
+
+  .contact-card a {
+    font-size: 13px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+
+  .header-container {
+    gap: 12px;
+  }
+
+  .logo-box img {
+    height: 38px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-card {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f9fbff;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  .owner-name {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .contact-card a {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .contact-card img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .alert-bar {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

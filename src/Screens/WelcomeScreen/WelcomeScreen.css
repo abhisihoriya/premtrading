@@ -1,0 +1,101 @@
+/* MAIN CONTAINER */
+.welcome-container {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* 🔥 MODERN BACKGROUND */
+  background: linear-gradient(135deg, #ffffff, #f5f8ff);
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* LOGO WRAPPER */
+.logo-wrapper {
+  animation: logoPop 1s ease;
+  margin-bottom: 20px;
+}
+
+/* LOGO */
+.logo-wrapper img {
+  width: 160px;
+  max-width: 60vw;
+}
+
+/* TEXT */
+.welcome-text {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* BRAND */
+.brand {
+  color: #1e5eff;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* SUBTEXT */
+.subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* CURSOR */
+.cursor {
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes logoPop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 22px;
+  }
+
+  .logo-wrapper img {
+    width: 130px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .logo-wrapper img {
+    width: 110px;
+  }
+}

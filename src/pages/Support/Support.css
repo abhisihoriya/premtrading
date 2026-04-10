@@ -1,0 +1,14 @@
+.page-container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.page-container h1 {
+    margin-bottom: 20px;
+    color: #001f3f;
+}
+
+.page-container h3 {
+    margin-top: 20px;
+}
