@@ -1,11 +1,94 @@
+/* ── Prem Trading design system ── */
+:root {
+  --pt-navy: #0a2540;
+  --pt-navy-mid: #134067;
+  --pt-navy-soft: #1a4d7a;
+  --pt-accent: #2f6fed;
+  --pt-accent-hover: #1d5bd8;
+  --pt-accent-muted: #e8f0fe;
+  --pt-teal: #0ea5a0;
+  --pt-surface: #f3f6fb;
+  --pt-surface-elevated: #ffffff;
+  --pt-border: #e3eaf3;
+  --pt-border-strong: #cbd5e1;
+  --pt-text: #1e293b;
+  --pt-text-muted: #64748b;
+  --pt-shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.06);
+  --pt-shadow-md: 0 8px 24px rgba(10, 37, 64, 0.08);
+  --pt-shadow-lg: 0 16px 40px rgba(10, 37, 64, 0.1);
+  --pt-radius-sm: 8px;
+  --pt-radius-md: 14px;
+  --pt-radius-lg: 18px;
+  --pt-font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --pt-max-width: 1200px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
   width: 100%;
-  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--pt-font);
+  color: var(--pt-text);
+  background: var(--pt-surface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--pt-accent);
+}
+
+/* Shared legal / content pages */
+.page-container {
+  padding: 48px 20px 56px;
+  max-width: 880px;
+  margin: 0 auto;
+  background: var(--pt-surface-elevated);
+  border-radius: var(--pt-radius-md);
+  box-shadow: var(--pt-shadow-sm);
+  border: 1px solid var(--pt-border);
+}
+
+.page-shell {
+  background: var(--pt-surface);
+  padding: 24px 16px 48px;
+}
+
+.page-container h1 {
+  margin-bottom: 16px;
+  color: var(--pt-navy);
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+}
+
+.page-container h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--pt-navy-mid);
+  font-size: 1.05rem;
+}
+
+.page-container p {
+  color: var(--pt-text-muted);
+  line-height: 1.65;
 }

@@ -7,6 +7,7 @@ const Privacy = () => {
         <>
             <Header />
 
+            <div className="page-shell">
             <div className="page-container">
                 <h1>Privacy Policy</h1>
 
@@ -30,6 +31,7 @@ const Privacy = () => {
                     We ensure your data is securely stored and not shared with third parties.
                 </p>
 
+            </div>
             </div>
             <Footer />
         </>

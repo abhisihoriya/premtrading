@@ -7,6 +7,7 @@ const Support = () => {
         <>
             <Header />
 
+            <div className="page-shell">
             <div className="page-container">
                 <h1>Help & Support</h1>
 
@@ -21,6 +22,7 @@ const Support = () => {
                 <h3>Working Hours</h3>
                 <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
 
+            </div>
             </div>
             <Footer />
         </>

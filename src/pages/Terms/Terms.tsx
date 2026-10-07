@@ -6,6 +6,7 @@ const Terms = () => {
   return (
     <>
     <Header/>
+    <div className="page-shell">
     <div className="page-container">
       <h1>Terms & Conditions</h1>
 
@@ -29,6 +30,7 @@ const Terms = () => {
         We are not responsible for any indirect damages arising from product use.
       </p>
 
+    </div>
     </div>
     <Footer/>
     </>

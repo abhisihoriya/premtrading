@@ -9,7 +9,7 @@
   justify-content: center;
 
   /* 🔥 MODERN BACKGROUND */
-  background: linear-gradient(135deg, #ffffff, #f5f8ff);
+  background: linear-gradient(145deg, #ffffff 0%, var(--pt-accent-muted) 100%);
 
   text-align: center;
   padding: 20px;
@@ -36,7 +36,7 @@
 
 /* BRAND */
 .brand {
-  color: #1e5eff;
+  color: var(--pt-accent);
   font-weight: 700;
   margin-left: 6px;
 }

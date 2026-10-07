@@ -1,152 +1,117 @@
-/* ================= MAIN HEADER ================= */
 .header {
   width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
+  background: var(--pt-surface-elevated);
+  border-bottom: 1px solid var(--pt-border);
+  box-shadow: var(--pt-shadow-sm);
 }
 
-/* ================= CONTAINER ================= */
 .header-container {
+  max-width: var(--pt-max-width);
+  margin: 0 auto;
   width: 100%;
-  padding: 12px 40px;
-  /* 🔥 gives spacing instead of margin auto */
-
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* ================= LOGO ================= */
 .logo-box {
   display: flex;
   align-items: center;
 }
 
 .logo-box img {
-  height: 48px;
+  height: 50px;
   object-fit: contain;
 }
 
-/* ================= CONTACT WRAPPER ================= */
 .contact-wrapper {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
-/* ================= CONTACT CARD ================= */
 .contact-card {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  padding: 6px 10px;
-  border-radius: 8px;
-
-  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: var(--pt-radius-sm);
+  transition: background 0.2s ease;
 }
 
 .contact-card:hover {
-  background: #f5f8ff;
+  background: var(--pt-accent-muted);
 }
 
-/* ================= NAME ================= */
 .owner-name {
   display: flex;
   align-items: center;
   gap: 6px;
-
   font-size: 13px;
-  color: #444;
+  color: var(--pt-text-muted);
 }
 
-/* ================= PHONE ================= */
 .contact-card a {
   display: flex;
   align-items: center;
   gap: 6px;
-
   font-size: 14px;
   font-weight: 600;
-  color: #1e5eff;
+  color: var(--pt-accent);
   text-decoration: none;
 }
 
 .contact-card a:hover {
-  color: #000;
+  color: var(--pt-navy);
 }
 
-/* ================= ICONS ================= */
 .contact-card img {
   width: 14px;
   height: 14px;
 }
 
-/* ================= ALERT BAR ================= */
 .alert-bar {
-  background: linear-gradient(90deg, #1e5eff, #00aaff);
+  background: linear-gradient(
+    90deg,
+    var(--pt-navy) 0%,
+    var(--pt-navy-mid) 45%,
+    var(--pt-accent) 100%
+  );
   color: #fff;
-
   text-align: center;
-  padding: 8px;
+  padding: 9px 16px;
   font-size: 14px;
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-/* ================= TABLET ================= */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 12px 20px;
-  }
-}
-
-/* ================= TABLET ================= */
 @media (max-width: 768px) {
-
   .header-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-  }
-
-  .logo-box img {
-    height: 42px;
+    gap: 14px;
   }
 
   .contact-wrapper {
     width: 100%;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px;
   }
 
   .contact-card {
     flex: 1;
     align-items: flex-start;
-    padding: 8px;
-  }
-
-  .owner-name {
-    font-size: 12px;
-  }
-
-  .contact-card a {
-    font-size: 13px;
   }
 }
 
-/* ================= MOBILE ================= */
 @media (max-width: 480px) {
-
-  .header-container {
-    gap: 12px;
-  }
-
   .logo-box img {
-    height: 38px;
+    height: 42px;
   }
 
   .contact-wrapper {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .contact-card {
@@ -154,29 +119,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    background: #f9fbff;
-    border-radius: 10px;
-    padding: 10px 12px;
-  }
-
-  .owner-name {
-    font-size: 12px;
-    font-weight: 500;
-  }
-
-  .contact-card a {
-    font-size: 13px;
-    font-weight: 600;
-  }
-
-  .contact-card img {
-    width: 13px;
-    height: 13px;
+    background: var(--pt-surface);
+    border: 1px solid var(--pt-border);
   }
 
   .alert-bar {
     font-size: 12px;
-    padding: 6px;
+    padding: 8px;
   }
 }
